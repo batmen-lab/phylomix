@@ -10,7 +10,7 @@ from lightning.pytorch import seed_everything
 from scanpy import AnnData
 
 from data import PhylogenyDataset, PhylogenyTree
-from model import MIOSTONEModel
+from miostone import MIOSTONEModel
 
 
 class Pipeline(ABC):

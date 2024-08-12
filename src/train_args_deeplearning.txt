@@ -1,10 +1,1 @@
---seed=0 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
---seed=1 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
---seed=2 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
---seed=3 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
---seed=4 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
---seed=5 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
---seed=6 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
---seed=7 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
---seed=8 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
---seed=9 --dataset=alzbiom --target=ad --augmentation_type=cutmix4 --model_type=mlp
+--seed=0 --dataset=alzbiom --target=ad --augmentation_type=phylomix --model_type=linear
