@@ -190,3 +190,57 @@ class PopPhyCNN(nn.Module):
 
     def get_total_l0_reg(self):
         return torch.tensor(0.0).to(self.output_layer.weight.device)
+
+
+class Autoencoder(nn.Module):
+    def __init__(self, dims, act=nn.ReLU(), init=None, latent_act=False, output_act=False):
+        super(Autoencoder, self).__init__()
+        # Encoder
+        encoder_layers = []
+        for i in range(len(dims) - 1):
+            encoder_layers.append(nn.Linear(dims[i], dims[i + 1]))
+            encoder_layers.append(act)
+
+        self.encoder = nn.Sequential(*encoder_layers)
+
+        # Decoder
+        decoder_layers = []
+        for i in range(len(dims) - 1, 0, -1):
+            decoder_layers.append(nn.Linear(dims[i], dims[i - 1]))
+            decoder_layers.append(act)
+
+        if output_act:
+            decoder_layers.append(nn.Sigmoid())
+
+        self.decoder = nn.Sequential(*decoder_layers)
+
+    def forward(self, x):
+        encoded = self.encoder(x)
+        decoded = self.decoder(encoded)
+        return decoded
+    
+
+class EncoderProjectionHead(nn.Module):
+    def __init__(self, input_dim, hidden_dim1=1024, hidden_dim2=256, latent_dim=512, output_dim=512):
+        super(EncoderProjectionHead, self).__init__()
+        self.fc1 = nn.Linear(input_dim, input_dim // 2)
+        self.fc2 = nn.Linear(input_dim // 2, hidden_dim1)
+        self.fc3 = nn.Linear(hidden_dim1, output_dim)
+        self.encoder = nn.Sequential(
+            self.fc1,
+            nn.ReLU(),
+            self.fc2,
+            nn.ReLU(),
+            self.fc3
+        )
+        self.projection_head = nn.Sequential(
+            nn.Linear(latent_dim, 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
+            nn.BatchNorm1d(128)
+        )
+
+    def forward(self, x):
+        z = self.encoder(x)
+        z = self.projection_head(z)
+        return F.normalize(z, dim=1)  # Normalize the output
