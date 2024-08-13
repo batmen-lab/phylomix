@@ -22,7 +22,7 @@ from sklearn.manifold import TSNE
 from tqdm import tqdm
 
 from supervised_learning import TrainingPipeline
-from mixup import Mixup
+from mixup.mixup import Mixup
 import numpy as np
 import argparse
 import json

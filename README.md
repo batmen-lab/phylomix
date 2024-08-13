@@ -20,13 +20,13 @@ conda env create -f environment.yml
 - To run supervised learning training:
 
 ```{bash}
-./submit_job.sh args_file.txt supervised
+bash run_job.sh args_file.txt supervised
 ```
 
 - To run contrastive learning training:
 
 ```{bash}
-./submit_job.sh args_file.txt contrastive
+bash run_job.sh args_file.txt contrastive
 ```
 
 

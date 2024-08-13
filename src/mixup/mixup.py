@@ -33,22 +33,33 @@ class Mixup:
         :param phylogeny_tree: PhylogenyTree instance representing the phylogeny feature hierarchy.
         :param contrastive_learning: Boolean indicating whether contrastive learning mode is enabled.
         """
+        if not taxonomy_tree and not phylogeny_tree:
+            raise ValueError("At least one tree (taxonomy_tree or phylogeny_tree) must be provided.")
+    
         self.data = copy.deepcopy(dataset)
         self.taxonomy_tree = taxonomy_tree
         self.phylogeny_tree = phylogeny_tree
-        self.phylogeny_tree.ete_tree.resolve_polytomy(recursive=True)
+        if self.phylogeny_tree:
+            self.phylogeny_tree.ete_tree.resolve_polytomy(recursive=True)
+            self.all_nodes_phyl = list(self.phylogeny_tree.ete_tree.traverse("levelorder"))
+            self.phylogeny_leaves = list(self.phylogeny_tree.ete_tree.leaf_names())
+            self.num_leaves = len(self.phylogeny_leaves)
+        if self.taxonomy_tree:
+            self.all_nodes_taxo = list(self.taxonomy_tree.ete_tree.traverse("levelorder"))
+            self.taxonomy_leaves = list(self.taxonomy_tree.ete_tree.leaf_names())
+            self.num_leaves = len(self.taxonomy_leaves)
 
-        self.all_nodes_taxo = list(self.taxonomy_tree.ete_tree.traverse("levelorder"))
-        self.all_nodes_phyl = list(self.phylogeny_tree.ete_tree.traverse("levelorder"))
-
+        if self.taxonomy_tree and self.phylogeny_tree and len(self.taxonomy_leaves) != len(self.phylogeny_leaves):
+            raise ValueError("taxonomy tree and phylogeny tree has different leaves, please prune it!")
+        
         if contrastive_learning:
             np.random.seed(None)
 
         # Compute distances
-        self.taxonomy_leaves = list(self.taxonomy_tree.ete_tree.leaf_names())
-        self.phylogeny_leaves = list(self.phylogeny_tree.ete_tree.leaf_names())
         self.distances = self._compute_euclidean_distances()
         self.unifrac_distances = dataset.unifrac_distances_map
+        self.min_threshold = np.quantile(self.distances[self.distances != 0], 0)
+        self.max_threshold = np.quantile(self.distances[self.distances != 0], 1)
 
     def _compute_euclidean_distances(self):
         """
@@ -154,7 +165,7 @@ class Mixup:
                 all_nodes = self.all_nodes_phyl
 
             features_dict = {feature_name: idx for idx, feature_name in enumerate(self.data.features.tolist())}
-            n_leaves = int((1 - lam) * len(self.taxonomy_leaves))
+            n_leaves = int((1 - lam) * self.num_leaves)
             selected_index = set()
             mixed_x = x1.copy()
 
@@ -251,7 +262,7 @@ class Mixup:
 
         return self.data
 
-    def mixup(self, min_threshold, max_threshold, num_samples, method, alpha, tree,
+    def mixup(self, num_samples, method, alpha, tree, min_threshold=None, max_threshold=None,
               index1=None, index2=None, contrastive_learning=False, seed=0):
         """
         Perform Mixup augmentation on the dataset.
@@ -269,6 +280,9 @@ class Mixup:
         :return: An augmented PhylogenyDataset instance.
         :raises ValueError: If no sample pairs are found within the distance threshold.
         """
+        if not min_threshold and not max_threshold:
+            min_threshold = self.min_threshold
+            max_threshold = self.max_threshold
         eligible_pairs = self._compute_eligible_pairs(min_threshold, max_threshold)
         mixed_xs, mixed_ys = [], []
 
