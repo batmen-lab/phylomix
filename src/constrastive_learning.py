@@ -79,9 +79,86 @@ class ContrastiveLearningPipeline(TrainingPipeline):
         mat1, mat2 = table1.matrix_data.todense(), table2.matrix_data.todense()
         self.TADA_aug1, self.TADA_aug2 = np.array(mat1.T, dtype=np.float32), np.array(mat2.T, dtype=np.float32)
 
+    def _train(self):
+        # Check if data and tree are loaded
+        if not self.data or not self.tree:
+            raise ValueError('Please load data and tree first.')
+        # Define metrics
+        num_classes = len(np.unique(self.data.y))
+        metrics = MetricCollection({
+            'AUROC': MulticlassAUROC(num_classes=num_classes),
+            'AUPRC': MulticlassAveragePrecision(num_classes=num_classes)
+        })
+        self.train_hparams['k_folds'] = 5
+        self.train_hparams['batch_size'] = 512
+        self.train_hparams['max_epochs'] = 100
+        self.train_hparams['class_weight'] = 'balanced'
+        
+        # Define cross-validation strategy
+        kf = KFold(n_splits=self.train_hparams['k_folds'], shuffle=True, random_state=self.seed)
+        # Training loop
+        fold_test_labels = []
+        fold_test_logits = []
+        for fold, (train_index, test_index) in enumerate(kf.split(self.data.X, self.data.y)):
+            X_train, X_test = self.data.X[train_index], self.data.X[test_index]
+
+            input_dim = X_train.shape[-1]
+            self._initialize_unsupervised_model(input_dim, self.epochs)
+            self._train_unsupervised_model(X_train)
+
+
+            feature_extractor = self.unsupervised_model.encoder
+            feature_extractor.eval()
+            # Convert self.data.X to a PyTorch tensor and move it to the same device as the model
+            X_tensor = torch.tensor(self.data.X, dtype=torch.float32).to(self.device)
+            # Apply feature_extractor, ensure no gradient computation
+            with torch.no_grad():
+                extracted_features = feature_extractor(X_tensor)
+            # Configure default training parameters
+            self.aug_type = 'None'
+            # Convert the extracted features back to a NumPy array
+            self.data.X = extracted_features.cpu().numpy()
+            # Prepare datasets
+            normalize = False
+            clr = False
+            train_dataset = self._create_subset(self.data, 
+                                                train_index, 
+                                                normalize=normalize,
+                                                one_hot_encoding=False, 
+                                                clr=clr)
+            test_dataset = self._create_subset(self.data, 
+                                               test_index, 
+                                               normalize=normalize,
+                                               one_hot_encoding=False, 
+                                               clr=clr)
+
+            # normalize the deep features Create classifier 
+            classifier = self._create_classifier(train_dataset, metrics)
+
+                        # Set filename
+            filename = f"{self.seed}_{fold}_{self.unsupervised_type}_{self.model_type}"
+            filename += f"_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            # Run training
+            result = self._run_training(classifier, train_dataset, test_dataset, test_dataset, filename)
+            fold_test_labels.append(torch.tensor(result['test_labels']))
+            fold_test_logits.append(torch.tensor(result['test_logits']))
+                     
+            # Save results and model
+            self._save_result(result, self.pred_dir, filename)
+            # self._save_model(classifier, self.model_dir, filename)
+
+        # Calculate metrics
+        test_labels = torch.cat(fold_test_labels, dim=0)
+        test_logits = torch.cat(fold_test_logits, dim=0)
+        metrics.to(test_labels.device)
+        test_scores = metrics(test_logits, test_labels)
+        print(f"Test scores:")
+        for key, value in test_scores.items():
+            print(f"{key}: {value.item()}")
+
 
     def _load_simclr_data(self, train_dataset):
-        mixup_processor = MIOSTONEMixup(train_dataset, self.tree, self.phylogeny_tree, contrastive_learning=True)
+        mixup_processor = Mixup(train_dataset, self.tree, self.phylogeny_tree, contrastive_learning=True)
         min_threshold = np.quantile(mixup_processor.distances[mixup_processor.distances != 0], 0)
         max_threshold = np.quantile(mixup_processor.distances[mixup_processor.distances != 0], 1)
         n = train_dataset.X.shape[0]
@@ -133,7 +210,7 @@ class ContrastiveLearningPipeline(TrainingPipeline):
     def _initialize_unsupervised_model(self, input_dim, epochs):
         self.epochs = epochs
         if self.unsupervised_type == 'autoencoder':
-            dims = [input_dim, input_dim // 2, 1024, 512]
+            dims = [input_dim, input_dim // 2, 1024, 512, 256, 128]
             self.unsupervised_model = Autoencoder(dims)
             self.unsupervised_criterion = nn.MSELoss()
 
@@ -232,6 +309,7 @@ class ContrastiveLearningPipeline(TrainingPipeline):
         self._train_unsupervised_model(self.data)
 
         # Here you can continue with any downstream tasks, e.g., classification or regression
+        self._train()
 
 def contrastive_learning_pipeline(dataset, target, unsupervised_type, model_type, seed, epochs):
     pipeline = ContrastiveLearningPipeline(seed, dataset)
