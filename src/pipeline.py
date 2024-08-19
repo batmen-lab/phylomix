@@ -9,7 +9,7 @@ import torch
 from lightning.pytorch import seed_everything
 from scanpy import AnnData
 
-from data import PhylogenyDataset, PhylogenyTree
+from mixup.data import PhylogenyDataset, PhylogenyTree
 from miostone import MIOSTONEModel
 
 

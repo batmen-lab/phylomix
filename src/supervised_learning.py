@@ -32,7 +32,7 @@ from torchmetrics import MetricCollection
 from torchmetrics.classification import MulticlassAUROC, MulticlassAveragePrecision
 
 from model import MLP, PopPhyCNN, TaxoNN
-from data import PhylogenyDataset
+from mixup.data import PhylogenyDataset
 from mixup import Mixup
 from miostone import MIOSTONEModel
 from pipeline import Pipeline

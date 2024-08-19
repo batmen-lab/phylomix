@@ -1,0 +1,218 @@
+sample_name	age_at__diagnosis	diagnosis	host_age	host_subject_id	location	race	ses_cd_total_score	sex	uceis
+S000107212	not applicable	healthy_control	not providednot provided	HC1	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107213	not applicable	healthy_control	not providednot provided	HC2	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107214	not applicable	healthy_control	not providednot provided	HC3	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107215	not applicable	healthy_control	not providednot provided	HC4	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107217	not applicable	healthy_control	not providednot provided	HC21	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107218	not applicable	healthy_control	not providednot provided	HC5	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107219	not applicable	healthy_control	not providednot provided	HC6	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107221	not applicable	healthy_control	not providednot provided	HC8	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107222	not applicable	healthy_control	not providednot provided	HC10	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107223	not applicable	healthy_control	not providednot provided	HC11	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107225	not applicable	healthy_control	not providednot provided	HC12	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107226	not applicable	healthy_control	not providednot provided	HC14	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107229	not applicable	healthy_control	not providednot provided	HC15	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107231	not applicable	healthy_control	not providednot provided	HC16	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S0001072320	not applicable	healthy_control	not providednot provided	HC20	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107582	not applicable	healthy_control	not providednot provided	HC17	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107590	not applicable	healthy_control	not providednot provided	HC18	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S000107591	not applicable	healthy_control	not providednot provided	HC19	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S107220	not applicable	healthy_control	not providednot provided	HC7	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S107222	not applicable	healthy_control	not providednot provided	HC9	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S107226	not applicable	healthy_control	not providednot provided	HC13	not applicable	not provided	healthy_control	not providednot provided	healthy_control
+S150675.113	25	uc	33	150675-133	missing	caucasian	missing	male	missing
+S150675.317	35	uc	50	150675-317	missing	caucasian	missing	female	missing
+S150675.323	21	uc	35	150675-323	missing	caucasian	missing	female	4
+S150675.324	15	uc	22	150675-324	missing	hispanic or latino	missing	male	6
+S150675.332	41	uc	53	150675-332	missing	caucasian	missing	male	1
+S150675.333	17	cd	20	150675-333	colonic	hispanic or latino	6	female	missing
+S150675.339	43	cd	64	150675-339	missing	caucasian	5	male	missing
+FIT001CCAL	34	cd	40	150675-11	ileal	hispanic	missing	male	missing
+FIT001E3CAL	34	cd	40	150675-11	ileal	hispanic	7	male	missing
+FIT002CCAL	15	uc	31	150675-9	missing	hispanic	missing	female	missing
+FIT002E3CAL	15	uc	31	150675-9	missing	hispanic	missing	female	0
+FIT004CCAL	25	cd	55	150675-14	colonic	african american	3	male	missing
+FIT004E3CAL	25	cd	55	150675-14	colonic	african american	3	male	missing
+FIT006CCAL	18	cd	26	150675-10	ileal	caucasian	6	male	missing
+FIT006E3CAL	18	cd	26	150675-10	ileal	caucasian	6	male	missing
+FIT008CCAL	33	cd	51	150675-24	colonic	hispanic	0	male	missing
+FIT008E3CAL	33	cd	51	150675-24	colonic	hispanic	0	male	missing
+FIT010CCAL	21	cd	35	150675-3	ileal	caucasian	3	male	missing
+FIT010E3CAL	21	cd	35	150675-3	ileal	caucasian	3	male	missing
+FIT011E3CAL	28	cd	42	150675-53	ileal	middle eastern	7	male	missing
+FIT012E3CAL	42	cd	63	150675-46	isolated upper	hispanic	3	female	missing
+FIT013E3CAL	13	cd	44	150675-37	ileal	caucasian	0	female	missing
+FIT014E3CAL	35	cd	64	150675-41	ileocolonic	caucasian	11	female	missing
+FIT018CCAL	29	uc	58	150675-38	missing	caucasian	missing	female	0
+FIT019E3CAL	25	cd	39	150675-42	colonic	caucasian	24	male	missing
+FIT019E3CAL.SWAB	25	cd	39	150675-42	colonic	caucasian	24	male	missing
+FIT023E3CAL	65	cd	3	150675-35	ileocolonic	caucasian	4	female	missing
+FIT024E3CAL	21	cd	26	150675-17	colonic	asian	10	female	missing
+FIT025E3CAL	34	uc	63	150675-5	missing	caucasian	missing	female	0
+FIT026CCAL	37	uc	51	150675-27	missing	non-hispanic	missing	female	missing
+FIT027CCAL	21	cd	35	150675-3	ileal	caucasian	missing	male	missing
+FIT030E3CAL	25	cd	39	150675-65	ileal	caucasian	7	female	missing
+FIT031CCAL	59	cd	62	150675-82	colonic	caucasian	12	male	missing
+FIT031E3CAL	59	cd	62	150675-82	colonic	caucasian	12	male	missing
+FIT032E3CAL	42	uc	47	150675-48	missing	caucasian	missing	female	0
+FIT033E3CAL	16	cd	24	150675-52	ileocolonic	caucasian	35	male	missing
+FIT036CCAL	42	uc	47	150675-48	missing	caucasian	missing	female	0
+FIT037CCAL	62	uc	68	150675-50	missing	hispanic	missing	female	5
+FIT038CCAL	21	cd	37	150675-81	colonic	caucasian	0	female	missing
+FIT038E3CAL	21	cd	37	150675-81	colonic	caucasian	0	female	missing
+FIT048E3CAL	29	uc	33	150675-92	missing	asian	missing	female	1
+FIT049E3CAL	48	cd	59	150675-72	missing	caucasian	19	female	missing
+FIT051E3CAL	34	cd	40	150675-11	ileal	hispanic	8	male	missing
+FIT052E3CAL	18	cd	41	150675-100	small bowel	caucasian	4	male	missing
+FIT053E3CAL	9	cd	27	150675-49	ileocolonic	caucasian	0	female	missing
+FIT054E3CAL	25	cd	28	150675-59	ileal	caucasian	11	male	missing
+FIT055E3CAL	16	cd	27	150675-80	ileocolonic	african american	1	female	missing
+FIT058E3CAL	22	cd	25	150675-73	missing	caucasian	not done patient scoped by other provider	male	missing
+FIT060E3CAL	44	cd	54	150675-78	colonic	caucasian	0	male	missing
+FIT065E3CAL	21	cd	38	150675-116	ileal	middle eastern	4	not provided	missing
+FIT067E3CAL	18	cd	31	150675-86	ileal	caucasian	6	female	missing
+FIT068E3CAL	22	cd	26	150675-101	ileocolonic	middle eastern	17	male	missing
+FIT070E3CAL	19	cd	40	150675-93	colonic	caucasian	4	female	missing
+FIT071E3CAL	17	cd	27	150675-45	ileocolonic	middle eastern	7	male	missing
+FIT073E3CAL	22	cd	39	150675-112	ileal	caucasian	1	female	missing
+FIT074E3CAL	15	cd	27	150675-109	ileal	caucasian	3	female	missing
+FIT076E3CAL	15	cd	40	150675-216	ileal	caucasian	0	male	missing
+FIT077E3CAL	17	cd	56	150675-95	isolated upper	caucasian	0	female	missing
+FIT078E3CAL	16	cd	38	150675-87	colonic	caucasian	0	female	missing
+FIT079E3CAL	58	cd	64	150675-117	ileocolonic	caucasian	4	female	missing
+FIT080E3CAL	22	cd	28	150675-99	ileal	asian	4	female	missing
+FIT083E3CAL	11	uc	25	150675-143	missing	caucasian	missing	female	missing
+FIT084E3CAL	15	cd	28	150675-115	ileal	caucasian	0	female	missing
+FIT086E3CAL	51	cd	60	150675-151	ileal	middle eastern	4	male	missing
+FIT087E3CAL	18	cd	31	150675-135	ileal	caucasian	6	female	missing
+FIT091E3CAL	20	uc	46	150675-106	missing	caucasian	missing	male	3
+FIT092E3CAL	14	uc	48	150675-154	missing	jewish	3	male	missing
+FIT093E3CAL	25	cd	49	150675-104	ileocolonic	caucasian	0	female	missing
+FIT094E3CAL	37	cd	49	150675-96	ileal	caucasian	7	female	missing
+FIT095E3CAL	35	cd	56	150675-133	colonic	caucasian	0	female	missing
+FIT097E3CAL	31	uc	43	150675-145	missing	caucasian	missing	female	missing
+FIT099E3CAL	26	uc	46	150675-155	missing	caucasian	missing	male	0
+FIT101E3CAL	45	uc	65	150675-110	missing	middle eastern	missing	female	2
+FIT102E3CAL	23	uc	27	150675-127	missing	caucasian	missing	male	4
+FIT106E3CAL	42	cd	63	150675-46	isolated upper	hispanic	3	female	missing
+FIT107E3CAL	30	cd	37	150675-162	ileocolonic	caucasian	3	female	missing
+FIT108E3CAL	34	uc	63	150675-5	missing	caucasian	missing	female	2
+FIT112E3CAL	22	cd	39	150675-112	ileal	caucasian	1	female	missing
+FIT114E3CAL	11	cd	23	150675-114	missing	caucasian	missing	female	6
+FIT118E3CAL	17	cd	69	150675-170	ileocolonic	caucasian	0	male	missing
+FIT120E3CAL	23	cd	-88	150675-182	ileocolonic	caucasian	0	male	missing
+FIT121E3CAL	13	cd	32	150675-171	isolated upper	middle eastern	0	male	missing
+FIT122E3CAL	15	cd	31	150675-235	colonic	caucasian	24	male	missing
+FIT124E3CAL	47	cd	50	150675-175	colonic	caucasian	18	female	missing
+FIT125E3CAL	16	cd	26	150675-173	colonic	hispanic	0	female	missing
+FIT126E3CAL	15	uc	31	150675-9	missing	hispanic	missing	female	0
+FIT127E3CAL	19	cd	33	150675-156	ileal	caucasian	0	female	missing
+FIT128E3CAL	27	uc	56	150675-77	missing	caucasian	missing	female	0
+FIT129E3CAL	11	cd	45	150675-199	ileocolonic	caucasian	5	male	missing
+FIT131E3CAL	39	cd	71	150675-180	colonic	caucasian	0	male	missing
+FIT132E3CAL	13	cd	38	150675-166	ileocolonic	caucasian	6	female	missing
+FIT134E3CAL	32	cd	38	150675-178	colonic	african american	6	male	missing
+FIT135E3CAL	24	cd	36	150675-168	ileocolonic	middle eastern	3	male	missing
+FIT141E3CAL	41	cd	45	150675-105	ileocolonic	caucasian	3	female	missing
+FIT142E3CAL	21	uc	26	150675-211	missing	caucasian	missing	female	0
+FIT146E3CAL	53	cd	60	150675-195	ileal	caucasian	0	male	missing
+FIT148E3CAL	59	cd	62	150675-82	colonic	caucasian	missing	male	missing
+FIT150E3CAL	26	cd	65	150675-135	colonic	caucasian	18	female	missing
+FIT151E3CAL	26	uc	46	150675-155	missing	caucasian	missing	male	2
+FIT152E3CAL	58	cd	64	150675-117	ileocolonic	caucasian	0	female	missing
+FIT155E3CAL	20	cd	31	150675-194	ileocolonic	caucasian	4	female	missing
+FIT158E3CAL	26	uc	37	150675-197	missing	caucasian	missing	female	0
+FIT160E3CAL	20	cd	36	150675-204	ileal	caucasian	1	not provided	missing
+FIT162E3CAL	9	cd	55	150675-187	ileocolonic	caucasian	8	female	missing
+FIT164E3CAL	34	cd	40	150675-11	ileal	hispanic	3	male	missing
+FIT165E3CAL	10	cd	42	150675-130	colonic	caucasian	9	female	missing
+FIT166E3CAL	28	uc	33	150675-189	missing	caucasian	missing	female	1
+FIT169E3CAL	25	cd	29	150675-193	ileocolonic	mixed/non-hispanic	0	female	missing
+FIT170E3CAL	10	cd	28	150675-188	ileocolonic	caucasian	3	female	missing
+FIT177E3CAL	61	cd	73	150675-107	ileal	caucasian	6	female	missing
+FIT181E3CAL	21	cd	41	150675-108	perianal	caucasian	missing	female	missing
+FIT187E3CAL	7	cd	21	150675-229	colonic	caucasian	15	female	missing
+FIT188E3CAL	32	uc	35	150675-215	missing	caucasian	missing	female	7
+FIT189E3CAL	28	uc	33	150675-189	missing	caucasian	missing	female	1
+FIT191E3CAL	80	cd	66	150675-234	ileal	caucasian	0	male	missing
+FIT191E3CAL.A	80	cd	66	150675-234	ileal	caucasian	0	male	missing
+FIT191E3CAL.B	80	cd	66	150675-234	ileal	caucasian	0	male	missing
+FIT192E3CAL	24	cd	32	150675-227	ileocolonic	caucasian	0	male	missing
+FIT193E3CAL	24	cd	36	150675-168	ileocolonic	middle eastern	8	male	missing
+FIT194E3CAL	12	uc	26	150675-244	missing	african american	missing	female	0
+FIT196E3CAL	38	cd	46	150675-224	ileal	hispanic	2	female	missing
+FIT198E3CAL	14	cd	54	150675-63	ileal	caucasian	missing	male	missing
+FIT201E3CAL	8	cd	28	150675-206	colonic	asian	11	male	missing
+FIT202E3CAL	13	cd	38	150675-166	ileocolonic	caucasian	8	female	missing
+FIT206E3CAL	39	uc	61	150675-246	missing	caucasian	missing	male	missing
+FIT207E3CAL	26	cd	3	150675-34	colonic	caucasian	0	female	missing
+FIT209E3CAL	43	uc	81	150675-240	missing	caucasian	missing	male	3
+FIT210E3CAL	39	uc	59	150675-231	missing	caucasian	missing	female	0
+FIT211E3CAL	23	uc	31	150675-102	missing	caucasian	missing	female	0
+FIT216E3CAL	48	uc	51	150675-176	missing	african american	missing	male	4
+FIT218E3CAL	49	uc	55	150675-221	missing	middle eastern	missing	female	1
+FIT219E3CAL	23	uc	42	150675-253	missing	caucasian	missing	female	0
+FIT221E3CAL	39	uc	41	150675-225	missing	caucasian	missing	male	1
+FIT222E3CAL	19	cd	28	150675-223	ileocolonic	caucasian	0	male	missing
+FIT223E3CAL	25	cd	39	150675-42	colonic	caucasian	0	male	missing
+FIT226E3CAL	28	cd	40	150675-255	colonic	caucasian	0	male	missing
+FIT227E3CAL	47	cd	63	150675-261	ileocolonic	caucasian	0	female	missing
+FIT229E3CAL	15	ind	30	150675-236	missing	caucasian	0	male	missing
+FIT231E3CAL	10	cd	31	150675-256	ileocolonic	caucasian	26	male	missing
+FIT233E3CAL	26	uc	32	150675-207	missing	caucasian	missing	male	5
+FIT236E3CAL	26	uc	92	150675-36	missing	middle eastern	missing	male	5
+FIT237E3CAL	15	uc	24	not on original list	missing	caucasian	missing	female	5
+FIT237E3CAL.duplicate	15	uc	24	not on original list	missing	caucasian	missing	female	5
+FIT238E3CAL	58	uc	62	150675-265	missing	caucasian	missing	female	4
+FIT238E3CAL.SWAB	58	uc	62	150675-265	missing	caucasian	missing	female	4
+FIT239E3CAL	24	uc	37	150675-278	colonic	caucasian	missing	female	5
+FIT241E3CAL	51	cd	60	150675-151	ileal	middle eastern	0	male	missing
+FIT242E3CAL	22	uc	34	150675-56	missing	caucasian	missing	male	5
+FIT245E3CAL	33	cd	70	150675-275	missing	caucasian	1	female	missing
+FIT249E3CAL	16	cd	27	150675-286	colonic	caucasian	0	male	missing
+FIT250E3CAL	29	uc	36	150675-294	missing	caucasian	missing	male	6
+FIT252E3CAL	22	cd	30	150675-276	missing	caucasian	missing	female	6
+FIT253E3CAL	47	uc	53	150675-292	missing	caucasian	missing	female	0
+FIT254E3CAL	49	uc	64	150675-284	missing	caucasian	missing	female	5
+FIT255E3CAL	18	uc	30	150675-293	missing	caucasian	0	male	missing
+FIT256E3CAL	23	uc	33	150675-288	missing	caucasian	missing	female	1
+FIT257E3CAL	62	uc	68	150675-50	missing	hispanic	missing	female	5
+FIT260E3CAL	39	uc	43	150675-213	missing	caucasian	missing	male	2
+FIT261E3CAL	31	uc	43	150675-145	missing	caucasian	missing	female	missing
+FIT262E3CAL	19	uc	22	150675-254	missing	caucasian	missing	male	4
+FIT263E3CAL	26	cd	35	150675-257	ileocolonic	caucasian	0	male	missing
+FIT264E3CAL	25	uc	50	150675-202	missing	caucasian	missing	male	1
+FIT265E3CAL	27	cd	32	150675-33	ileocolonic	caucasian	8	female	missing
+FIT266E3CAL	40	uc	49	150675-268	missing	caucasian	missing	female	missing
+FIT267E3CAL	27	uc	47	150675-137	missing	caucasian	missing	female	5
+FIT268E3CAL	8	cd	28	150675-206	colonic	asian	23	male	missing
+FIT269E3CAL	30	uc	58	150675-260	missing	caucasian	missing	male	4
+FIT270E3CAL	26	uc	46	150675-155	missing	caucasian	missing	male	0
+FIT271E3CAL	35	uc	51	150675-184	missing	caucasian	missing	female	0
+FIT273E3CAL	46	uc	8	150675-297	missing	asian	missing	female	6
+FIT274E3CAL	23	cd	35	150675-289	ileocolonic	caucasian	19	female	missing
+FIT275E3CAL	23	cd	27	150675-285	ileocolonic	caucasian	0	male	missing
+FIT276E3CAL	39	uc	43	150675-213	missing	caucasian	missing	male	1
+FIT278E3CAL	16	cd	50	150675-311	ileocolonic	caucasian	7	male	missing
+FIT279E3CAL	19	cd	27	150675-243	ileal	caucasian	12	female	missing
+FIT280E3CAL	42	uc	44	150675-283	missing	caucasian	missing	female	2
+FIT281E3CAL	47	cd	54	150675-291	ileocolonic	caucasian	30	female	missing
+FIT284E3CAL	10	cd	23	150675-312	ileocolonic	caucasian	3	male	missing
+FIT285E3CAL	42	uc	56	150675-313	missing	caucasian	missing	female	1
+FIT286E3CAL	21	cd	41	150675-108	perianal	caucasian	missing	female	missing
+FIT287E3CAL	27	uc	47	150675-137	missing	caucasian	missing	female	5
+FIT288E3CAL	19	uc	22	150675-254	missing	caucasian	missing	male	missing
+FIT289E3CAL	17	uc	23	150675-303	missing	caucasian	missing	male	6
+FIT290E3CAL	49	uc	64	150675-284	missing	caucasian	missing	female	2
+FIT291E3CAL	16	uc	30	150675-319	missing	caucasian	missing	female	6
+FIT292E3CAL	14	uc	20	150675-281	missing	caucasian	missing	male	0
+FIT293E3CAL	12	cd (from uc 7/17/2018)	30	150675-321	missing	caucasian	17	female	missing
+FIT294E3CAL	32	cd	61	150675-262	missing	caucasian	missing	male	1
+FIT295E3CAL	7	cd	38	150675-306	ileocolonic	caucasian	0	male	missing
+FIT303E3CAL	20	cd	29	150675-263	ileocolonic	caucasian	31	male	missing
+FIT306E3CAL	26	uc	49	150675-218	missing	caucasian	missing	male	2
+FIT307E3CAL	53	cd	60	150675-195	ileal	caucasian	missing	male	missing
+FIT309E3CAL	39	cd	71	150675-180	colonic	caucasian	0	male	missing
+FIT310E3CAL	41	uc	48	150675-280	missing	middle eastern	missing	male	5
+FIT314E3CAL	27	uc	47	150675-137	missing	caucasian	missing	female	5
+FIT344E3CAL	33	cd	70	150675-275	missing	caucasian	1	female	missing

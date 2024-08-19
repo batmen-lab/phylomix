@@ -345,7 +345,7 @@ class Mixup:
         return [ete_node for ete_node in self.taxonomy_tree.ete_tree.traverse("levelorder")
                 if self.taxonomy_tree.depths[ete_node.name] == height]
 
-    def compositional_cutmix(self, min_threshold, max_threshold, num_samples):
+    def compositional_cutmix(self, num_samples, min_threshold=None, max_threshold=None):
         """
         Perform compositional cutmix augmentation on the dataset.
 
@@ -354,6 +354,9 @@ class Mixup:
         :param num_samples: The number of samples to generate.
         :return: The augmented dataset.
         """
+        if not min_threshold and not max_threshold:
+            min_threshold = self.min_threshold
+            max_threshold = self.max_threshold
         mixed_xs, mixed_ys = [], []
         classes = [0, 1]
         class_data = {cls: [] for cls in classes}
