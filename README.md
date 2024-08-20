@@ -35,7 +35,7 @@ bash run_job.sh args_file.txt contrastive
 
 The `setup_data` function initializes the dataset and the phylogeny tree from the specified file paths. This function is designed to make it easy to load and prepare your data for augmentation, and we prune the tree leaves to match the number of data features.
 
-```{python}
+```python
 from mixup import setup_data
 
 # File paths to your data and phylogeny tree
@@ -52,7 +52,7 @@ data, tree = setup_data(data_fp, meta_fp, target_fp, phylogeny_tree_fp, prune=Tr
 ### 2. Augmenting the Data
 Once you have your dataset and tree set up, you can use the `augment` function to apply a variety of augmentation techniques. This function allows you to easily apply mixup-based augmentations.
 
-```{Python}
+```python
 from mixup import augment
 
 augmented_data = augment(
