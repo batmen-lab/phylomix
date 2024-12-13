@@ -11,7 +11,8 @@ The augmentation methods aim to improve model generalization by creating synthet
 1. **Phylomix**: A novel method using phylogeny or taxonomy trees for Mixup.
 2. **Vanilla Mixup**: Traditional Mixup with linear interpolation.
 3. **Aitchison Mixup**: Mixup based on Aitchison geometry for compositional data.
-4. **Cutmix**: Variants of Cutmix adapted to phylogenetic trees.
+4. **Compositional Cutmix**: Variants of Cutmix adapted to phylogenetic trees.
+5. **Aitchison Mixup**: Mixup in the Aitchison space.
 
 ---
 
